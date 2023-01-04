@@ -2,7 +2,7 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-
+/* Function: Natural numbers list */
 function generate_numbers(N) {
     let temp_result = [];
     for (let i=1; i<N; i++) {
@@ -11,6 +11,7 @@ function generate_numbers(N) {
     return temp_result;
 }
 
+/* Function: test if factor */
 function is_multiple(p,q) {
     if ((p%q) == 0) {
         return true;
@@ -19,6 +20,7 @@ function is_multiple(p,q) {
     }
 }
 
+/* Function: factorisation */
 function extract_multiples(array,quotient1,quotient2) {
     let temp_result = [];
     for (let i of array) {
@@ -29,6 +31,7 @@ function extract_multiples(array,quotient1,quotient2) {
     return temp_result;
 }
 
+/* Function: sum all elements */
 function summing(elements) {
     let sum = 0;
     for (let i of elements) {
@@ -37,12 +40,14 @@ function summing(elements) {
     return sum;
 }
 
+/* Function: calculate and write answer */
 function execute(N,q1,q2) {
     const result = document.getElementById("result");
     let multiples_list = extract_multiples(generate_numbers(N),q1,q2);
     result.innerHTML=`The natural numbers below ${N} that are multiples of ${q1} or ${q2} are: ${multiples_list}. <br/>Their sum is: ${summing(multiples_list)}`;
 }
 
+/* Function: main process */
 function main() {
     execute(1000,3,5);
 }

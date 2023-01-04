@@ -48,22 +48,24 @@ function main() {
 }
 ***END***/
 
+/* Function: recursive test for prime factors of N */
 function getPrimeFactors(N) {
-    let n = N;
-    factors = [];
-    let i = 2;
+    let n = N;    // initialise
+    factors = []; // list of confirmed prime factors
+    let i = 2;    // index (potential prime factor)
     while (i<N && product(factors)<N) {
         console.log(i);
-        if (n%i == 0) {
-            n = n/i;
-            factors.push(i);
+        if (n%i == 0) {      // if index is a prime factor
+            factors.push(i); // then store it
+            n = n/i;         // and work with remainder
         } else {
-            i++;
+            i++;             // otherwise move to next candidate
         }
     }
     return factors;
 }
 
+/* Function: product of all elements in array */
 function product(array) {
     let p = 1;
     for (let i of array) {
@@ -72,6 +74,7 @@ function product(array) {
     return p;
 }
 
+/* Function: sum of all elements in array */
 function sumArray(array) {
     let res = 0;
     for (let i in array) {
@@ -80,6 +83,7 @@ function sumArray(array) {
     return res;
 }
 
+/* Function: main process */
 function alternateMain() {
     const n = 600851475143;
     let primeFactors = getPrimeFactors(n);
