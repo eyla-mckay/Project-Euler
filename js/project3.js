@@ -38,7 +38,7 @@ function sumArray(array) {
 
 /* Function: main process */
 function alternateMain() {
-    const n = 600851475143;
+    const n =  parseInt(document.getElementById("n").value);
     let primeFactors = getPrimeFactors(n);
     document.getElementById("result").innerHTML = "The prime factors of "+n+" are: "+primeFactors+"<br>The largest is: "+Math.max.apply(null, primeFactors);
 }
