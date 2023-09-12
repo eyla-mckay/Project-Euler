@@ -42,10 +42,10 @@ function execute(a,b,N) {
     let even_sequence = extractEvenNumbers(sequence); // filter generated sequence
     let sum = summing(even_sequence);                 // add all terms
     const result = document.getElementById("result");
-    result.innerHTML=`Terms of Fibonnacci sequence whose values do not exceed ${N}: ${sequence} <br/>Even terms among them: ${even_sequence}<br/>Sum of those even terms: ${sum}`;
+    result.innerHTML=`Terms of Fibonnacci sequence whose values do not exceed ${N}: <br/>${sequence} <br/><br/>Even terms among them: <br/>${even_sequence} <br/><br/>Sum of those even terms: ${sum}`;
 }
 
 /* Function: Main process */
 function main() {
-    execute(1,2,4000000);
+    execute(1,2,parseInt(document.getElementById("n").value));
 }
