@@ -27,7 +27,7 @@ function extractEvenNumbers(array) {
     return sequence;
 }
 
-/* Function: sum of terms */
+/* Function: Sum of terms */
 function summing(array) {
     let sum = 0;
     for (let i of array) {
@@ -45,7 +45,7 @@ function execute(a,b,N) {
     result.innerHTML=`Terms of Fibonnacci sequence whose values do not exceed ${N}: ${sequence} <br/>Even terms among them: ${even_sequence}<br/>Sum of those even terms: ${sum}`;
 }
 
-/* Function: main process */
+/* Function: Main process */
 function main() {
     execute(1,2,4000000);
 }

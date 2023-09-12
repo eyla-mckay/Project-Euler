@@ -18,31 +18,8 @@ function isPalindrome(argument) {
     return true;
 }
 
-/* Function: brute force version */
-// function testNumbersBruteForce(len) {
-//     const N=(10**len)-1;
-//     const delta=10;
-//     console.log(""+len+" digits: init "+N);
-//     let maxPal = 0;
-//     let i = 0
-//     for(let x1 = N; x1 > 0; x1-=1) {
-//         for(let x2 = N; x2 > 0; x2-=1) {
-//             i+=1;
-//             let p = x1*x2;
-//             console.log(`${x1}*${x2} = ${p}`);
-//             if(isPalindrome(p)) {
-//                 if(p>maxPal) {
-//                     maxPal = p;
-//                     steps = i;
-//                 }
-//             }
-//         }
-//     }
-//     console.log(i,"steps")
-//     return maxPal;
-// }
 
-/* Function: recursive test for palindromic products algorithm (optimised) */
+/* Function: recursive test for palindromic products */
 function testNumbers(len) {
     const N=(10**len)-1;   // upper limit
     const delta=10;        // interval
@@ -67,7 +44,6 @@ function testNumbers(len) {
     console.log(i,"steps")
     return maxPal;
 }
-
 
 
 /* Function: main process */
