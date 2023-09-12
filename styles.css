@@ -5,3 +5,7 @@ body {
 ol li {
   list-style-type: disc;
 }
+
+input {
+  max-width: 6em;
+}

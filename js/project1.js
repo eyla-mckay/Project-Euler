@@ -47,7 +47,17 @@ function execute(N,q1,q2) {
     result.innerHTML=`The natural numbers below ${N} that are multiples of ${q1} or ${q2} are: ${multiples_list}. <br/>Their sum is: ${summing(multiples_list)}`;
 }
 
+/* Function: collect parameters */
+function init() {
+    let q1 = parseInt(document.getElementById("q1").value);
+    let q2 = parseInt(document.getElementById("q2").value);
+    let n = parseInt(document.getElementById("n").value);
+}
+
 /* Function: main process */
 function main() {
-    execute(1000,3,5);
+    let q1 = parseInt(document.getElementById("q1").value);
+    let q2 = parseInt(document.getElementById("q2").value);
+    let n = parseInt(document.getElementById("n").value);
+    execute(n,q1,q2);
 }
