@@ -27,15 +27,6 @@ function product(array) {
     return p;
 }
 
-/* Function: sum of all elements in array */
-function sumArray(array) {
-    let res = 0;
-    for (let i in array) {
-        res += array[i];
-    }
-    return res;
-}
-
 /* Function: main process */
 function alternateMain() {
     const n =  parseInt(document.getElementById("n").value);
