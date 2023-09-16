@@ -2,23 +2,17 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 function main() {
-
     /* acquire variables */
     const n  = parseInt(document.getElementById("n").value);
     const q1 = parseInt(document.getElementById("q1").value);
     const q2 = parseInt(document.getElementById("q2").value);
 
     /* calculate */
-
-    let sum = 0;
-    // let multiples = []; // initialise list (if we want the list of multiples for later)
-
+    let sum = 0; // initialise total
+    
     for (let i=1; i<n; i++) { // for each natural number until N
-
         if ( ((i%q1) == 0) || ((i%q2) == 0)) { // if evenly divisible by Q1 or Q2
-
-            sum += i;
-            // multiples.push(i) // save to array (if we want the list of multiples for later)
+            sum += i; // add to total
             }
         }
     
